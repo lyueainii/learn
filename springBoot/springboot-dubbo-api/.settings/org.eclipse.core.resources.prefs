@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/main/java=utf-8
+encoding//src/main/java/com/dubbo/base/BaseDTO.java=UTF-8
+encoding//src/main/java/com/dubbo/base/RequestParam.java=UTF-8
+encoding//src/main/java/com/dubbo/base/ResponseResult.java=UTF-8
+encoding//src/main/java/com/dubbo/http/paramreq/gatewayfront/FrontGateWayParam.java=UTF-8
+encoding//src/main/java/com/dubbo/http/paramres/gatewayfront/FrontGateWayResult.java=UTF-8
+encoding//src/test/java=utf-8

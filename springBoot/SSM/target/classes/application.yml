@@ -1,0 +1,48 @@
+#数据源驱动  
+#dbc:
+#  ds:
+ #   url: jdbc:mysql://localhost/ssm?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull  
+ #   username: root  
+ #   password: root  
+ #   driver-class-name: com.mysql.jdbc.Driver  
+  
+#mybatis配置      
+#mybatis:
+ # type-aliases-package: com.sam.project.*.model  
+ # mapper-locations: classpath:mapper/*.xml  
+  
+server:
+  port: 8088  
+  contextPath: /SSM 
+#设置环境配置  
+#spring.profiles.active=dev  
+  
+#http encoding  
+#spring:
+#  http:
+#    encoding:
+#      charset: UTF-8  
+#      enabled: true  
+ #     force: true  
+#日志  
+logging:
+  file: /export/log  
+  level:
+    root: INFO  
+    org:
+      springframework:
+        web: INFO  
+    sample:
+      mybatis.mapper: TRACE  
+  
+#关闭启动Logo  
+#spring.main.banner-mode=off  
+  
+  
+#设置mvc页面跳转  
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/  
+      suffix: .jsp  
+    

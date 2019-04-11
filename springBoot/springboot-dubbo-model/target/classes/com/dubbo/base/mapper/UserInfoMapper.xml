@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dubbo.base.mapper.UserInfoMapper">
+	<resultMap id="BaseResultMap" type="com.dubbo.base.entity.UserInfo">
+		<result column="USER_NAME" property="userName" />
+		<result column="USER_SEX" property="userSex" />
+		<result column="USER_MOBILENO" property="userMobileNo" />
+		<result column="USER_CREATER_TIME" property="userCreatTime" />
+		<result column="USER_CRAD_TYPE" property="userCardType" />
+		<result column="USER_CARD_NO" property="userCardNo" />
+		<result column="USER_PASSWORD" property="userPassword" />
+	</resultMap>
+    <sql id="user_fill_Column_List">
+	    USER_NAME, USER_SEX, USER_MOBILENO, USER_CREATER_TIME,USER_CRAD_TYPE,USER_CARD_NO,USER_PASSWORD
+	  </sql>
+	<!-- <parameterMap id="requstParam" type="com.dubbo.base.entity.User"/>
+ -->
+	<select id="queryUserInfo" resultMap="BaseResultMap" parameterType="map">
+		select 
+		<include refid="user_fill_Column_List" />
+		from USER_INFO
+		where USER_NAME=#{userName,jdbcType=VARCHAR}
+			 <!-- <if test="dateTime != null and dateTime !=''" >
+				AND date_time = #{dateTime,jdbcType=VARCHAR} 
+			</if>
+			<if test="sign != null and sign !=''" >
+				AND sign = #{sign,jdbcType=VARCHAR} 
+			</if> -->
+	</select>
+
+</mapper>

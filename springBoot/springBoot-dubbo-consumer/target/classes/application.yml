@@ -1,0 +1,23 @@
+## 避免和 server 工程端口冲突
+server:
+  port: 8081
+  #context-path: /
+## Dubbo 服务消费者配置
+#spring:
+ # dubbo:
+ #   application:
+ #     name: consumer
+    #consumer:
+     # filter: com.dubbo.util.ServiceFilter
+ #   registry:
+ #     address: zookeeper://127.0.0.1:2181
+ #   base-package: com.dubbo.* ##先执行一次spring-annotation-dubbo.xml才有效
+logging:
+  file: D:/dubbo-cunsumer/log.log
+  level: 
+    org:
+      springframework:
+        web: DEBUG
+    
+    
+
